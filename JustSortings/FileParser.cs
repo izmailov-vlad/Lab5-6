@@ -8,7 +8,8 @@ namespace JustSortings
         public int[] ParseFromFile()
         {
             int[] numbers = new int[21];
-            string path = @"C:\Users\User\source\repos\JustSortings\Numbers.txt";
+             
+            string path = System.Environment.CurrentDirectory + @"\\Numbers.txt";
 
             using (StreamReader sr = new StreamReader(path, System.Text.Encoding.Default))
             {

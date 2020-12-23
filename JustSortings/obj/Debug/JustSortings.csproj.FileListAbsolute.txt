@@ -9,3 +9,14 @@ C:\Users\User\source\repos\JustSortings\bin\Debug\JustSortings.pdb
 C:\Users\User\source\repos\JustSortings\obj\Debug\JustSortings.exe
 C:\Users\User\source\repos\JustSortings\obj\Debug\JustSortings.pdb
 C:\Users\User\source\repos\JustSortings\obj\Debug\JustSortings.GenerationForm.resources
+C:\Users\User\source\repos\Lab5-6\JustSortings\bin\Debug\JustSortings.exe.config
+C:\Users\User\source\repos\Lab5-6\JustSortings\bin\Debug\JustSortings.exe
+C:\Users\User\source\repos\Lab5-6\JustSortings\bin\Debug\JustSortings.pdb
+C:\Users\User\source\repos\Lab5-6\JustSortings\obj\Debug\JustSortings.csprojAssemblyReference.cache
+C:\Users\User\source\repos\Lab5-6\JustSortings\obj\Debug\JustSortings.GenerationForm.resources
+C:\Users\User\source\repos\Lab5-6\JustSortings\obj\Debug\JustSortings.Properties.Resources.resources
+C:\Users\User\source\repos\Lab5-6\JustSortings\obj\Debug\JustSortings.SortForm.resources
+C:\Users\User\source\repos\Lab5-6\JustSortings\obj\Debug\JustSortings.csproj.GenerateResource.cache
+C:\Users\User\source\repos\Lab5-6\JustSortings\obj\Debug\JustSortings.csproj.CoreCompileInputs.cache
+C:\Users\User\source\repos\Lab5-6\JustSortings\obj\Debug\JustSortings.exe
+C:\Users\User\source\repos\Lab5-6\JustSortings\obj\Debug\JustSortings.pdb
