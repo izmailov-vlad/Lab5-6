@@ -104,6 +104,7 @@
             this.Cancel.TabIndex = 7;
             this.Cancel.Text = "Отмена";
             this.Cancel.UseVisualStyleBackColor = true;
+            this.Cancel.Click += new System.EventHandler(this.Cancel_Click);
             // 
             // GenerationForm
             // 
@@ -118,6 +119,7 @@
             this.Controls.Add(this.label3);
             this.Controls.Add(this.label2);
             this.Controls.Add(this.label1);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "GenerationForm";
             this.Text = "GenerationForm";
             this.ResumeLayout(false);

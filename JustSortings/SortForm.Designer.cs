@@ -1,4 +1,5 @@
-﻿namespace JustSortings
+﻿using System.Windows.Forms;
+namespace JustSortings
 {
     partial class SortForm
     {
@@ -17,7 +18,9 @@
             {
                 components.Dispose();
             }
+
             base.Dispose(disposing);
+            Application.Exit();
         }
 
         #region Код, автоматически созданный конструктором форм Windows
@@ -108,6 +111,7 @@
             this.Controls.Add(this.button2);
             this.Controls.Add(this.SortButton);
             this.Controls.Add(this.SortedNumbersTextBox);
+            this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "SortForm";
             this.Text = "Form1";
             this.Load += new System.EventHandler(this.SortForm_Load);
