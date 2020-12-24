@@ -18,11 +18,14 @@ namespace JustSortings
 
         public void ShowNumbers(int []numbers)
         {
+            string text = System.String.Empty;
             SortedNumbersTextBox.Clear();
             for (int i = 0; i < numbers.Length; i++)
             {
-                SortedNumbersTextBox.Text += Convert.ToString(numbers[i]) + ",  ";
+                text += Convert.ToString(numbers[i]) + ",  ";
             }
+
+            SortedNumbersTextBox.Text = text;
         }
 
         private void Button1_Click(object sender, EventArgs e)
