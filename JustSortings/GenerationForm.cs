@@ -32,12 +32,19 @@ namespace JustSortings
 
         private void Apply_Click(object sender, EventArgs e)
         {
-            _generationPresenter.SetNewNumbersParams(
-                Convert.ToInt32(CountOfElementsTextBox.Text),
-                Convert.ToInt32(MinElementTextBox.Text),
-                Convert.ToInt32(MaxElementTextBox.Text),
-                _sortForm
-                );
+            try
+            {
+                _generationPresenter.SetNewNumbersParams(
+                    Convert.ToInt32(CountOfElementsTextBox.Text),
+                    Convert.ToInt32(MinElementTextBox.Text),
+                    Convert.ToInt32(MaxElementTextBox.Text),
+                    _sortForm
+                    );
+            }catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                MessageBox.Show("Error. Try again");
+            }
 
         }
 

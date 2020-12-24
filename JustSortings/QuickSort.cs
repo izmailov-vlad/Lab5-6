@@ -10,19 +10,19 @@ namespace JustSortings
     {
         private int partition(int[] array, int start, int end)
         {
-            int temp;//swap helper
-            int marker = start;//divides left and right subarrays
+            int temp;
+            int marker = start;
             for (int i = start; i < end; i++)
             {
-                if (array[i] < array[end]) //array[end] is pivot
+                if (array[i] < array[end]) 
                 {
-                    temp = array[marker]; // swap
+                    temp = array[marker];
                     array[marker] = array[i];
                     array[i] = temp;
                     marker += 1;
                 }
             }
-            //put pivot(array[end]) between left and right subarrays
+            
             temp = array[marker];
             array[marker] = array[end];
             array[end] = temp;
