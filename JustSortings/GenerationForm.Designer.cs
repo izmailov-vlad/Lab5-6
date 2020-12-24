@@ -79,21 +79,21 @@
             // 
             this.MaxElementTextBox.Location = new System.Drawing.Point(331, 49);
             this.MaxElementTextBox.Name = "MaxElementTextBox";
-            this.MaxElementTextBox.Size = new System.Drawing.Size(100, 20);
+            this.MaxElementTextBox.Size = new System.Drawing.Size(129, 20);
             this.MaxElementTextBox.TabIndex = 4;
             // 
             // MinElementTextBox
             // 
             this.MinElementTextBox.Location = new System.Drawing.Point(175, 49);
             this.MinElementTextBox.Name = "MinElementTextBox";
-            this.MinElementTextBox.Size = new System.Drawing.Size(100, 20);
+            this.MinElementTextBox.Size = new System.Drawing.Size(123, 20);
             this.MinElementTextBox.TabIndex = 5;
             // 
             // CountOfElementsTextBox
             // 
             this.CountOfElementsTextBox.Location = new System.Drawing.Point(24, 49);
             this.CountOfElementsTextBox.Name = "CountOfElementsTextBox";
-            this.CountOfElementsTextBox.Size = new System.Drawing.Size(100, 20);
+            this.CountOfElementsTextBox.Size = new System.Drawing.Size(121, 20);
             this.CountOfElementsTextBox.TabIndex = 6;
             // 
             // Cancel

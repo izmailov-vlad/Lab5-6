@@ -1,11 +1,6 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.ComponentModel;
-using System.Data;
-using System.Drawing;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
+using System.Diagnostics;
+using System.Threading;
 using System.Windows.Forms;
 
 namespace JustSortings
@@ -16,6 +11,9 @@ namespace JustSortings
         {
             InitializeComponent();
             _sortsPresenter = new SortsPresenter(this, new SortsModel());
+            uploadToolTip = new ToolTip();
+            workTime.Visible = false;
+            uploadToolTip.SetToolTip(UploadButton, "Upload numbers in file");
         }  
 
         public void ShowNumbers(int []numbers)
@@ -29,6 +27,10 @@ namespace JustSortings
 
         private void Button1_Click(object sender, EventArgs e)
         {
+            Stopwatch stopWatch = new Stopwatch();
+            stopWatch.Start();
+            
+
             if (QuickSortRadioButton.Checked)
             {
                 _sortsPresenter.SortNumbers("Quick");
@@ -37,6 +39,22 @@ namespace JustSortings
             {
                 _sortsPresenter.SortNumbers("Selection");
             }
+
+            stopWatch.Stop();
+            // Get the elapsed time as a TimeSpan value.
+            TimeSpan ts = stopWatch.Elapsed;
+
+            // Format and display the TimeSpan value.
+            string elapsedTime = String.Format(
+                "{0:00}:{1:00}:{2:00}.{3:00}",
+                ts.Hours, ts.Minutes, ts.Seconds,
+                ts.Milliseconds / 10);
+
+            workTime.Text = "Время работы: " + elapsedTime;
+            workTime.Visible = true;
+       
+
+            
         }
 
         private void Button4_Click(object sender, EventArgs e)
@@ -55,12 +73,27 @@ namespace JustSortings
             return _sortsPresenter;
         }
 
+        public ISortsModel GetSortsModel()
+        {
+            return _sortsPresenter.GetSortsModel();
+        }
+
         private void RadioButton2_CheckedChanged(object sender, EventArgs e)
         {
 
         }
 
         private void SortForm_Load(object sender, EventArgs e)
+        {
+
+        }
+
+        private void Button1_Click_1(object sender, EventArgs e)
+        {
+            _sortsPresenter.UploadFile();
+        }
+
+        private void ToolTip1_Popup(object sender, PopupEventArgs e)
         {
 
         }

@@ -16,6 +16,16 @@ namespace JustSortings
             return numbers;
         }
 
+        public void UploadFile()
+        {
+            if (numbers.Length == 0)
+            {
+                throw new NullReferenceException();
+            }
+            FileParser parser = new FileParser();
+            parser.UploadInFile(numbers);
+        }
+
         public int[] GetNumbers()
         {
             return numbers;
@@ -43,6 +53,10 @@ namespace JustSortings
 
         public int[] QuickSort()
         {
+            if (numbers.Length == 0)
+            {
+                throw new ArgumentException();
+            }
             QuickSort sort = new QuickSort();
             sort.Sort(ref numbers, 0, numbers.Length - 1);
             return numbers;
@@ -50,6 +64,10 @@ namespace JustSortings
 
         public int[] SelectionSort()
         {
+            if (numbers.Length == 0)
+            {
+                throw new ArgumentException();
+            }
             SelectionSort sort = new SelectionSort();
             sort.Sort(ref numbers);
             return numbers;

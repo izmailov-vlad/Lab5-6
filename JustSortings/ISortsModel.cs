@@ -10,7 +10,7 @@ namespace JustSortings
     {
 
         int[] GetNumbers();
-
+        void UploadFile();
         int[] LoadNumbers();
 
         int[] QuickSort();

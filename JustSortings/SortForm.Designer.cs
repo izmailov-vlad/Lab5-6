@@ -31,12 +31,15 @@ namespace JustSortings
         /// </summary>
         private void InitializeComponent()
         {
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(SortForm));
             this.SortedNumbersTextBox = new System.Windows.Forms.RichTextBox();
             this.SortButton = new System.Windows.Forms.Button();
             this.button2 = new System.Windows.Forms.Button();
             this.LoadNumbersButton = new System.Windows.Forms.Button();
             this.QuickSortRadioButton = new System.Windows.Forms.RadioButton();
             this.SelectionSortRadioButton = new System.Windows.Forms.RadioButton();
+            this.UploadButton = new System.Windows.Forms.Button();
+            this.workTime = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // SortedNumbersTextBox
@@ -53,7 +56,7 @@ namespace JustSortings
             this.SortButton.Name = "SortButton";
             this.SortButton.Size = new System.Drawing.Size(180, 50);
             this.SortButton.TabIndex = 1;
-            this.SortButton.Text = "Отсортировать";
+            this.SortButton.Text = "Sort";
             this.SortButton.UseVisualStyleBackColor = true;
             this.SortButton.Click += new System.EventHandler(this.Button1_Click);
             // 
@@ -63,7 +66,7 @@ namespace JustSortings
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(180, 50);
             this.button2.TabIndex = 2;
-            this.button2.Text = "Сгенерировать новую последовательность";
+            this.button2.Text = "Generate new sequence";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.Button2_Click);
             // 
@@ -73,7 +76,7 @@ namespace JustSortings
             this.LoadNumbersButton.Name = "LoadNumbersButton";
             this.LoadNumbersButton.Size = new System.Drawing.Size(180, 50);
             this.LoadNumbersButton.TabIndex = 4;
-            this.LoadNumbersButton.Text = "Загрузить числа";
+            this.LoadNumbersButton.Text = "Load numbers";
             this.LoadNumbersButton.UseVisualStyleBackColor = true;
             this.LoadNumbersButton.Click += new System.EventHandler(this.Button4_Click);
             // 
@@ -100,11 +103,32 @@ namespace JustSortings
             this.SelectionSortRadioButton.UseVisualStyleBackColor = true;
             this.SelectionSortRadioButton.CheckedChanged += new System.EventHandler(this.RadioButton2_CheckedChanged);
             // 
+            // UploadButton
+            // 
+            this.UploadButton.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("UploadButton.BackgroundImage")));
+            this.UploadButton.BackgroundImageLayout = System.Windows.Forms.ImageLayout.Center;
+            this.UploadButton.Location = new System.Drawing.Point(742, 38);
+            this.UploadButton.Name = "UploadButton";
+            this.UploadButton.Size = new System.Drawing.Size(31, 33);
+            this.UploadButton.TabIndex = 7;
+            this.UploadButton.UseVisualStyleBackColor = true;
+            this.UploadButton.Click += new System.EventHandler(this.Button1_Click_1);
+            // 
+            // workTime
+            // 
+            this.workTime.AutoSize = true;
+            this.workTime.Location = new System.Drawing.Point(218, 40);
+            this.workTime.Name = "workTime";
+            this.workTime.Size = new System.Drawing.Size(0, 13);
+            this.workTime.TabIndex = 8;
+            // 
             // SortForm
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(800, 450);
+            this.Controls.Add(this.workTime);
+            this.Controls.Add(this.UploadButton);
             this.Controls.Add(this.SelectionSortRadioButton);
             this.Controls.Add(this.QuickSortRadioButton);
             this.Controls.Add(this.LoadNumbersButton);
@@ -113,7 +137,7 @@ namespace JustSortings
             this.Controls.Add(this.SortedNumbersTextBox);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.FixedDialog;
             this.Name = "SortForm";
-            this.Text = "Form1";
+            this.Text = "JS";
             this.Load += new System.EventHandler(this.SortForm_Load);
             this.ResumeLayout(false);
             this.PerformLayout();
@@ -129,7 +153,9 @@ namespace JustSortings
         private System.Windows.Forms.Button LoadNumbersButton;
         private System.Windows.Forms.RadioButton QuickSortRadioButton;
         private System.Windows.Forms.RadioButton SelectionSortRadioButton;
-        
+        private Button UploadButton;
+        private ToolTip uploadToolTip;
+        private Label workTime;
     }
 }
 

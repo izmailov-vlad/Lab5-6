@@ -1,9 +1,5 @@
 ﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
+using System.Windows.Forms;
 namespace JustSortings
 {
     public class SortsPresenter
@@ -24,21 +20,45 @@ namespace JustSortings
             view.ShowNumbers(numbers);
         }
 
+        public void UploadFile()
+        {
+            try
+            {
+                model.UploadFile();
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                MessageBox.Show("Storage is empty");
+            }
+
+        }
         public void SortNumbers(string type)
         {
-            if (String.Compare(type, "Quick") == 0)
-            {
-                model.QuickSort();
-            }
-            
-            if (String.Compare(type, "Selection") == 0)
-            {
-                model.SelectionSort();
-            }
+            try {
+                if (String.Compare(type, "Quick") == 0)
+                {
+                    model.QuickSort();
+                }
 
-            view.ShowNumbers(model.GetNumbers());
+                else if (String.Compare(type, "Selection") == 0)
+                {
+                    model.SelectionSort();
+                }
+                
+
+                view.ShowNumbers(model.GetNumbers());
+            } catch(Exception ex)
+            {
+                Console.WriteLine(ex.ToString());
+                MessageBox.Show("Nothing to sort");
+            }
         }
 
+        public ISortsModel GetSortsModel()
+        {
+            return model;
+        }
         public void SetParamsOfSequence(ParamsOfSequence paramsOfSequence)
         {
             model.SetParamsOfSequence(paramsOfSequence);
