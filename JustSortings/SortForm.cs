@@ -21,7 +21,7 @@ namespace JustSortings
             SortedNumbersTextBox.Clear();
             for (int i = 0; i < numbers.Length; i++)
             {
-                SortedNumbersTextBox.Text += Convert.ToString(numbers[i]) + ", ";
+                SortedNumbersTextBox.Text += Convert.ToString(numbers[i]) + ",  ";
             }
         }
 
